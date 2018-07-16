@@ -233,7 +233,6 @@ Nice! This is interesting! A ratio of 1 to 1 is preferred when comparing the cit
 
 # Univariate Analysis
 
-### What is the structure of your dataset?
 There are 1599 red wines in this data set with 11 input variables (fixed acidity, volatile acidity, citric acid, residual sugar, chlorides, free sulfur dioxide, total sulfur dioxide, density, pH, sulphates, and alcohol) which are essentially chemical elements of red wine. Each wine was also given an output variables, that is the quality of the wine given by an integer value between 0 and 10 by a meadian of at least 3 experts. 
 
 Some observations:
@@ -243,16 +242,12 @@ Some observations:
 - pH usually ranges from 3 to 4, making the wine acidic
 - Wines with quality 6 and above have higher alcohol than the rest of the wines 
 
-### What is/are the main feature(s) of interest in your dataset?
 The main features of my data set will have to be the alcohol percent by volume, the pH, and the volatile acidity. These show very interesting features and hopefully they will allow me to explain what makes a good red wine.  
 
-### What other features in the dataset do you think will help support your investigation into your feature(s) of interest?
 I think that ratios I created will support my investigation. I hope to see other relations along the way to see if they are beneficial to my purpose. 
 
-### Did you create any new variables from existing variables in the dataset?
 Yes, I have created two new varibales from exisiting ones. These are ratios of variables that give some intuition when compared together. One is the citric acid to volatile acid, intuitively, this is a measurement of the freshness of the wine. The other variable is the ratio of sugars to salts; this is simply how much sweeter than salty is the wine. 
 
-### Of the features you investigated, were there any unusual distributions? Did you perform any operations on the data to tidy, adjust, or change the form of the data? If so, why did you do this?
 There are a couple of skewed histograms, such as for SO2. For these, I applied a log10 transformation, and obtain a normal distribution. I also transformed the ratio of citric acid to volatile acidity with a log10 transformation but I see the plot skewed to the left now. 
 
 This indicates that these variables are not normally distributed and would have to be looked into more detail for explanation.
@@ -413,7 +408,6 @@ Density is related to the residual sugar and the alcohol percent by volume. We c
 
 # Bivariate Analysis
 
-### Talk about some of the relationships you observed in this part of the investigation. How did the feature(s) of interest vary with other features in the dataset?
 I found a couple of interesting correlations between my main feature, quality to alcohol and volatile acidity.
 
 Quality has a somewhat strong correlation with alcohol. This correlation is positive, so as alcohol increases, the quality of the wine might increase with it. 
@@ -426,7 +420,6 @@ the three dots represent the relations that the quality of the wine, $quality_i$
 
 This expression is not useful in practive since we need the average of the volatile acidity by quality before hand. But it's interesting nonetheless.
 
-### Did you observe any interesting relationships between the other features (not the main feature(s) of interest)?
 Finding relations between other variables was a bit hard for me. I tried looking at variables that may have made sense together but to my (bad) luck I only found two.
 
 I found that the pH of the wine is closely related to the fixed acidity of the wine, and this makes sense. pH is a measure of the wine's acidity. However, I expected this to have a close to 1 correlation value. Instead, they have a correlation value of -0.68. 
@@ -435,7 +428,6 @@ I also found that the density of the wine is closely related to the residual sug
 
 From this a question came into mind. Does density have any correlation to the quality of wine? and if it does, how much more alcohol or sugar does it have? 
 
-### What was the strongest relationship you found?
 The strongest relationship I found for the whole data was the alcohol percent by volume to the quality of the wine. The wines with a higher quality had a higher alcohol level. The relationship between the quality and the volatile acidity was a little weaker overall, but the average volatile acidity for each quality had a immense correlation to the quality.
 
 
@@ -479,12 +471,10 @@ This confirms what I had deduced from the bivariate plots section.
 
 # Multivariate Analysis
 
-### Talk about some of the relationships you observed in this part of the investigation. Were there features that strengthened each other in terms of looking at your feature(s) of interest?
 Looking at the density plots for alcohol and volatile acidity really revealed where each quality wine lied down. For example, it was clear that qualities 6, 7 and 8 had a higher alcohol level than lower quality wines. However, wine with quality 5 were a bit off what I expected. This wine quality had a lower alcohol level than all other qualities including 3 and 4.
 
 The volatile acidity was revealing because it illustrated that lower volatile acidity is present in high quality wine. This is because high volatile acidity can produce an unpleasent, vinegar taste.
 
-### Were there any interesting or surprising interactions between features?
 I looked again at the relationship between alcohol, residual sugar and density. It was not much of a surprised, but I discovered that as the ratio of alcohol to residual sugar decreases the density increases. This means that as there is more residual sugar, then the density will increase. This is because sugar has a higher density than alcohol.
 
 ------
